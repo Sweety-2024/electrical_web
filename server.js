@@ -291,11 +291,7 @@ app.post("/api/contact", async (req, res) => {
 
     return res.status(200).json({
       success: true,
-      message:
-        adminMail && clientMail
-          ? "Inquiry sent successfully."
-          : "Inquiry received successfully.",
-      warning,
+      message: "Inquiry received successfully.",
       adminMessageId: adminMail ? adminMail.messageId : null,
       clientMessageId: clientMail ? clientMail.messageId : null
     });
@@ -316,8 +312,6 @@ app.post("/api/contact", async (req, res) => {
     return res.status(200).json({
       success: true,
       message: "Inquiry received successfully.",
-      warning:
-        "Inquiry could not be emailed right now, but it was saved locally.",
       errorMessage: error.message,
       errorCode: error.code,
       response: error.response,

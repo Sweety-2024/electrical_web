@@ -443,15 +443,14 @@ form.addEventListener("submit", function(e){
       if (!response.ok) {
         throw new Error(data.message || "Failed to send inquiry");
       }
+      showStatus(data.message || "Inquiry received successfully.", "success");
       if (data.warning) {
-        showStatus(data.warning, "success");
-      } else {
-        showStatus(data.message || "Inquiry sent successfully", "success");
+        console.log(data.warning);
       }
       form.reset();
     })
     .catch((error) => {
-      showStatus(error.message || "Unable to send inquiry right now", "error");
+      showStatus(error.message || "Unable to send inquiry right now.", "error");
     })
     .finally(() => {
       submitBtn.disabled = false;
