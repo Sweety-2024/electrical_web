@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Shivaay Traders</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.navbar{
+  background:#0f172a;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  padding:10px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo img{height:90px; width:auto;}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+}
+
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  position:relative;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  height:2px;
+  width:0;
+  background:#FFD700;
+  left:0;
+  bottom:-5px;
+  transition:0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after{
+  width:100%;
+}
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* ===== HERO ===== */
+.product-hero{
+  height:40vh;
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+             url("aboutpage.jpg") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.product-hero h1{
+  color:#FFD700;
+  font-size:40px;
+}
+
+/* ===== PRODUCTS ===== */
+.products{
+  padding:60px 20px;
+  background:#f5f5f5;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.product-card{
+  position: relative;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  transition:0.3s ease;
+}
+
+.product-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.product-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition:0.3s;
+}
+
+.product-card:hover img{
+  transform:scale(1.08);
+}
+
+.product-card h3{
+  margin:12px 0;
+  font-size:18px;
+}
+
+/* Badge */
+.badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#ff4757;
+  color:#fff;
+  padding:5px 10px;
+  font-size:12px;
+  border-radius:5px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.footer-col h2,
+.footer-col h3 {
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.footer-col a:hover {
+  color: #FFD700;
+}
+
+.footer-col ul {
+  list-style: none;
+  margin-top: 2px;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #FFD700;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+  color: #aaa;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .menu-toggle{display:block;}
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:60px;
+    width:100%;
+    background:#0f172a;
+    text-align:center;
+  }
+
+  .nav-links.active{display:flex;}
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="logo2.png" alt="Shivaay Traders logo">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="product.html" class="active">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="product-hero">
+  <h1>Our Products</h1>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="container">
+
+    <div class="product-card">
+      <span class="badge">Best Seller</span>
+      <img src="cfl bulb.jpg">
+      <h3>LED Bulb 9W</h3>
+    </div>
+
+    <div class="product-card">
+      <span class="badge">New</span>
+      <img src="led square.jpg">
+      <h3>LED Panel Light</h3>
+    </div>
+
+    <div class="product-card">
+      <img src="extension board.jpg">
+      <h3>Extension Board</h3>
+    </div>
+
+    <div class="product-card">
+      <span class="badge">Popular</span>
+      <img src="ceiling fan.jpg">
+      <h3>Ceiling Fan</h3>
+    </div>
+
+    <div class="product-card">
+      <img src="finolex cable.jpg">
+      <h3>Finolex Copper Cable</h3>
+    </div>
+
+    <div class="product-card">
+      <span class="badge">Hot</span>
+      <img src="samson led.jpg">
+      <h3>LED Tube Light</h3>
+    </div>
+
+    <div class="product-card">
+      <img src="switches.jpg">
+      <h3>Modular Switch Board</h3>
+    </div>
+
+    <div class="product-card">
+      <img src="trim led.jpg">
+      <h3>LED Trim Light</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h2>Shivaay Traders</h2>
+      <p>Your trusted electrical products supplier.</p>
+      <p>Quality lights, wires, switches, and accessories.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <a href="tel:+919871203212">📞 +91 9871203212</a>
+      <a href="mailto:a3527725@gmail.com">📧 a3527725@gmail.com</a>
+      <p>📍 Delhi, India</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Shivaay Traders
+  </div>
+</footer>
+
+<!-- JS -->
+<script>
+const toggle=document.getElementById("menu-toggle");
+const nav=document.getElementById("nav-links");
+
+toggle.onclick=()=>nav.classList.toggle("active");
+</script>
+
+</body>
+</html>

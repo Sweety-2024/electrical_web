@@ -1,0 +1,18 @@
+{
+  "name": "shivaay-traders-site",
+  "version": "1.0.0",
+  "description": "Shivaay Traders website with contact enquiry backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "helmet": "^7.2.0",
+    "iconv-lite": "^0.4.24",
+    "nodemailer": "^6.10.1"
+  }
+}

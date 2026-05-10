@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Test User",
+    "phone": "9876543210",
+    "email": "test@example.com",
+    "inquiry": "Product Inquiry",
+    "product": "LED",
+    "message": "This is a test message long enough.",
+    "createdAt": "2026-05-10T06:16:13.362Z"
+  },
+  {
+    "name": "Test User",
+    "phone": "9876543210",
+    "email": "test@example.com",
+    "inquiry": "Product Inquiry",
+    "product": "LED",
+    "message": "This is a test message long enough.",
+    "createdAt": "2026-05-10T06:18:54.450Z"
+  },
+  {
+    "name": "Test User",
+    "phone": "9876543210",
+    "email": "test@example.com",
+    "inquiry": "Product Inquiry",
+    "product": "LED",
+    "message": "This is a test message long enough.",
+    "createdAt": "2026-05-10T06:20:16.616Z"
+  },
+  {
+    "name": "Test User",
+    "phone": "9876543210",
+    "email": "test@example.com",
+    "inquiry": "Product Inquiry",
+    "product": "LED",
+    "message": "This is a test message long enough.",
+    "createdAt": "2026-05-10T06:22:44.285Z"
+  },
+  {
+    "name": "Test Customer",
+    "phone": "9876543210",
+    "email": "test@example.com",
+    "inquiry": "Product Inquiry",
+    "product": "LED Bulb 9W",
+    "message": "This is a test message for the LED Bulb inquiry that is long enough.",
+    "createdAt": "2026-05-10T06:56:15.192Z"
+  }
+]

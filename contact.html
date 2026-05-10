@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Shivaay Traders</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+/* ===== HEADER ===== */
+.navbar{
+  background:#0f172a;
+  position:sticky;
+  top:0;
+}
+
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+}
+
+.logo img{height:55px;}
+
+.logo img{height:90px; width:auto;}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+}
+
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  position:relative;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  height:2px;
+  width:0;
+  background:#FFD700;
+  left:0;
+  bottom:-5px;
+  transition:0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after{
+  width:100%;
+}
+
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* ===== HERO ===== */
+.contact-hero{
+  height:50vh;
+  background:url("aboutpage.jpg") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+.contact-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+.contact-hero h1{
+  color:#FFD700;
+  z-index:1;
+}
+
+/* ===== SECTION ===== */
+.contact-section{
+  padding:60px 20px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+/* LEFT */
+.contact-info{flex:1;}
+
+.contact-info p{color:#555; margin:8px 0;}
+
+.whatsapp{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 20px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  border-radius:5px;
+}
+
+/* FORM */
+.contact-form{
+  flex:1;
+  background:#f8f9fa;
+  padding:25px;
+  border-radius:10px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+.contact-form button{
+  width:100%;
+  padding:12px;
+  background:#FFD700;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.contact-form button:disabled{
+  opacity:0.75;
+  cursor:not-allowed;
+}
+
+.form-status{
+  margin-top:10px;
+  font-size:14px;
+  min-height:20px;
+}
+
+.form-status.success{color:#1e7e34;}
+.form-status.error{color:#c1121f;}
+.form-status.warning{color:#b26a00;}
+
+/* ===== FOOTER ===== */
+/* FOOTER */
+.footer {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* HEADINGS */
+.footer-col h2,
+.footer-col h3 {
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* LINKS */
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #FFD700;
+}
+
+/* WHATSAPP BUTTON */
+.footer-whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #aaa;
+}
+/* MOBILE */
+@media(max-width:768px){
+  .menu-toggle{display:block;}
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    background:#0f172a;
+    position:absolute;
+    top:60px;
+    width:100%;
+    text-align:center;
+  }
+  .nav-links.active{display:flex;}
+  .container{flex-direction:column;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="logo2.png" alt="Shivaay Traders logo">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="product.html">Products</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="contact-hero">
+  <h1>Contact Us</h1>
+</div>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="container">
+
+    <!-- LEFT -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>📍 Delhi, India</p>
+      <p>📞 +91 9871203212</p>
+      <p>📧 a3527725@gmail.com</p>
+
+      <a href="https://wa.me/919871203212" class="whatsapp">
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-form">
+      <h2>Send Inquiry</h2>
+
+      <form id="contactForm" novalidate>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="email" id="email" placeholder="Email" required>
+
+        <select id="inquiry" required>
+          <option value="">Select Inquiry</option>
+          <option>Product Inquiry</option>
+          <option>Bulk Order</option>
+        </select>
+
+        <input type="text" id="product" placeholder="Product Name" required>
+        <textarea id="message" placeholder="Message" required></textarea>
+
+        <button type="submit" id="submitBtn">Send Inquiry</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+ <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Company -->
+    <div class="footer-col">
+      <h2>Shivaay Traders</h2>
+      <p>
+        Your trusted electrical products supplier. We provide quality lights,
+        wires, switches, and accessories at the best prices.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-col">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">LED Lights</a></li>
+        <li><a href="#">Switches & Boards</a></li>
+        <li><a href="#">Wires & Cables</a></li>
+        <li><a href="#">Fans</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <p>📞 +91 9871203212</p>
+      <p>📧 a3527725@gmail.com</p>
+            <p>📍 Delhi, India</p>
+
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/919871203212" class="footer-whatsapp">
+        Chat on WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2026 Shivaay Traders | All Rights Reserved</p>
+  </div>
+</footer>
+<!-- JS -->
+<script>
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.onclick = () => nav.classList.toggle("active");
+
+const form = document.getElementById("contactForm");
+const submitBtn = document.getElementById("submitBtn");
+const formStatus = document.getElementById("formStatus");
+
+const urlParams = new URLSearchParams(window.location.search);
+const prefilledProduct = urlParams.get("product");
+const prefilledInquiry = urlParams.get("inquiry");
+
+if (prefilledProduct) {
+  document.getElementById("product").value = prefilledProduct;
+}
+
+if (prefilledInquiry) {
+  document.getElementById("inquiry").value = prefilledInquiry;
+}
+
+function showStatus(message, type){
+  formStatus.textContent = message;
+  formStatus.className = `form-status ${type}`;
+}
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  showStatus("", "");
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const inquiry = document.getElementById("inquiry").value;
+  const product = document.getElementById("product").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const phoneRegex=/^[6-9]\d{9}$/;
+  const emailRegex=/^\S+@\S+\.\S+$/;
+
+  if(name==="") return showStatus("Enter name", "error");
+  if(!phoneRegex.test(phone)) return showStatus("Enter valid 10-digit phone number", "error");
+  if(!emailRegex.test(email)) return showStatus("Enter valid email", "error");
+  if(inquiry==="") return showStatus("Select inquiry", "error");
+  if(product==="") return showStatus("Enter product", "error");
+  if(message.length<10) return showStatus("Message should be at least 10 characters", "error");
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  const apiUrl = window.location.protocol === 'file:' ? "http://localhost:3000/api/contact" : "/api/contact";
+
+  fetch(apiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name,
+      phone,
+      email,
+      inquiry,
+      product,
+      message
+    })
+  })
+    .then(async (response) => {
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to send inquiry");
+      }
+      if (data.warning) {
+        showStatus(data.warning, "success");
+      } else {
+        showStatus(data.message || "Inquiry sent successfully", "success");
+      }
+      form.reset();
+    })
+    .catch((error) => {
+      showStatus(error.message || "Unable to send inquiry right now", "error");
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Inquiry";
+    });
+});
+</script>
+
+</body>
+</html>
